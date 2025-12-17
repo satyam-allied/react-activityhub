@@ -1,0 +1,251 @@
+/* DEFINE VARIABLES GLOBALLY */
+:root {
+    /* --- Brand Colors --- */
+    --ah-brand-dark-default: #2E2D70;
+    --ah-brand-default: #5856D6;
+    --ah-brand-10: #B2B0FF;
+    --ah-brand-20: #D0CEFF;
+    --ah-brand-30: #EEECFF;
+
+    /* --- Grayscale / Neutrals --- */
+    --ah-black-10: #252525;
+    --ah-black-20: #424242;
+    --ah-black-30: #979797;
+    --ah-white-00: #FFFFFF;
+    --ah-white-10: #F5F5F5;
+    --ah-white-20: #E1E1E1;
+    --ah-white-30: #CDCDCD;
+
+    /* --- Backgrounds & Fills --- */
+    --ah-bg-dark-10: #141F32;
+    --ah-bg-dark-20: #283346;
+    --ah-bg-dark-30: #323D50;
+    --ah-dark-fill: #475469;
+    --ah-dark-stroke: #505B6E;
+    --ah-bg-light: #FFFFFF;
+    --ah-stroke: #E5E7E8;
+    --ah-fill: #F2F2F2;
+    --ah-line: #979797;
+
+    /* --- Accent Colors --- */
+    --ah-blue-10: #93C7FF;
+    --ah-blue-20: #ACD4FF;
+    --ah-green-10: #9DE3A5;
+    --ah-green-20: #D5F8D9;
+    --ah-orange-10: #FFB693;
+    --ah-orange-20: #FFCBB3;
+    --ah-violet-10: #DFA3FF;
+    --ah-violet-20: #E0C3EF;
+
+    /* --- Action Colors (Light Mode) --- */
+    --ah-yellow-action-10: #9E773E;
+    --ah-yellow-action-20: #FFF0D3;
+    --ah-green-action-10: #3F9C67;
+    --ah-green-action-20: #D8FDD2;
+    --ah-green-login-00: #91FF9D;
+    --ah-vilote-action-10: #7860EA;
+    --ah-vilote-action-20: #E7E0FF;
+    --ah-red-action-10: #7D0727;
+    --ah-red-action-20: #FBD8DC;
+    --ah-blue-action-10: #1C79D6;
+    --ah-blue-action-20: #D0E8FF;
+    --ah-grey-action-10: #444444;
+    --ah-grey-action-20: #C6C6C6;
+
+    /* --- Action Colors (Dark Mode) --- */
+    --ah-blue-action-dark-10: #60BDE8;
+    --ah-blue-action-dark-20: #082C3C;
+    --ah-green-action-dark-10: #34D36F;
+    --ah-green-action-dark-20: #123528;
+    --ah-violet-action-dark-10: #A698EF;
+    --ah-violet-action-dark-20: #242545;
+    --ah-red-action-dark-10: #FD9CA5;
+    --ah--red-action-dark-20: #502C39;
+    --ah-brown-action-dark-10: #D9B09E;
+    --ah-brown-action-dark-20: #35271E;
+    --ah-yellow-action-dark-10: #FBCF78;
+    --ah-yellow-action-dark-20: #352D22;
+    --ah-grey-action-dark-10: #575757;
+    --ah-light-action-dark-20: #CFCFCF;
+
+    /* --- Gradients --- */
+    --ah-gradient-stroke-dark: linear-gradient(134deg, #8381F2 0, #4B4A84 100.00%);
+    --ah-line-gradient: linear-gradient(180deg, rgba(151, 151, 151, 0) 0, #979797 50.00%, rgba(151, 151, 151, 0) 100.00%);
+
+    /* --- Shadows --- */
+    --shadow-10-light: 0px 0px 20px 0px rgba(130, 128, 255, 0.1);
+    --shadow-drop-15: 0 0 15px 0 rgba(130, 128, 255, 0.2);
+    --shadow-20-light: 0px 0px 20px 0px rgba(130, 128, 255, 0.2);
+    --shadow-10-dark: 0px 0px 20px 0px rgba(88, 86, 214, 0);
+    --shadow-30-dark: 0px 0px 20px 0px rgba(88, 86, 214, 0);
+
+    /* --- Typography (Renamed to avoid conflicts) --- */
+    --bold-13: 13px;
+    --bold-15: 15px;
+    --medium-13: 13px;
+    --medium-14: 14px;
+    --medium-6: 6px;
+    --medium-10: 10px;
+    --semi-bold-12: 12px;
+    --semibold-16: 16px;
+    --light-14: 14px;
+    --regular-8: 8px;
+    --regular-16: 16px;
+    --regular-14: 14px;
+    --regular-10-roboto: 10px;
+}
+
+/* 2. UTILITY CLASSES */
+
+/* Colors */
+.ah-brand-dark-default {
+    color: var(--ah-brand-dark-default);
+}
+
+.ah-brand-default {
+    color: var(--ah-brand-default);
+}
+
+.ah-brand-10 {
+    color: var(--ah-brand-10);
+}
+
+.ah-brand-20 {
+    color: var(--ah-brand-20);
+}
+
+.ah-brand-30 {
+    color: var(--ah-brand-30);
+}
+
+.ah-black-10 {
+    color: var(--ah-black-10);
+}
+
+.ah-black-20 {
+    color: var(--ah-black-20);
+}
+
+.ah-black-30 {
+    color: var(--ah-black-30);
+}
+
+.ah-white-00 {
+    color: var(--ah-white-00);
+}
+
+.ah-white-10 {
+    color: var(--ah-white-10);
+}
+
+.ah-white-20 {
+    color: var(--ah-white-20);
+}
+
+.ah-white-30 {
+    color: var(--ah-white-30);
+}
+
+/* Background Colors */
+.bg-ah-dark-10 {
+    background-color: var(--ah-bg-dark-10);
+}
+
+.bg-ah-dark-20 {
+    background-color: var(--ah-bg-dark-20);
+}
+
+.bg-ah-dark-30 {
+    background-color: var(--ah-bg-dark-30);
+}
+
+.bg-ah-light {
+    background-color: var(--ah-bg-light);
+}
+
+.bg-ah-fill {
+    background-color: var(--ah-fill);
+}
+
+/* Gradients (Must use background, not color) */
+.ah-gradient-stroke-dark {
+    background: var(--ah-gradient-stroke-dark);
+}
+
+.ah-line-gradient {
+    background: var(--ah-line-gradient);
+}
+
+/* Shadows */
+.shadow-10-light {
+    box-shadow: var(--shadow-10-light);
+}
+
+.shadow-drop-15 {
+    box-shadow: var(--shadow-drop-15);
+}
+
+.shadow-20-light {
+    box-shadow: var(--shadow-20-light);
+}
+
+.shadow-10-dark {
+    box-shadow: var(--shadow-10-dark);
+}
+
+.shadow-30-dark {
+    box-shadow: var(--shadow-30-dark);
+}
+
+/* Typography Classes */
+.text-bold-13 {
+    font-size: var(--bold-13);
+    line-height: 1.38;
+    font-weight: 600;
+}
+
+.text-bold-15 {
+    font-size: var(--bold-15);
+    line-height: 1.46;
+    font-weight: 700;
+}
+
+.text-medium-13 {
+    font-size: var(--medium-13);
+    line-height: 1.69;
+    font-weight: 500;
+}
+
+.text-medium-14 {
+    font-size: var(--medium-14);
+    line-height: 1.57;
+    font-weight: 500;
+}
+
+.text-semibold-12 {
+    font-size: var(--semi-bold-12);
+    line-height: 1.83;
+    font-weight: 600;
+}
+
+.text-semibold-16 {
+    font-size: var(--semibold-16);
+    line-height: 1.375;
+    font-weight: 600;
+}
+
+.text-regular-16 {
+    font-size: var(--regular-16);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.text-regular-14 {
+    font-size: var(--regular-14);
+    line-height: 1.42;
+    font-weight: 400;
+}
+
+.bg-ah-vilote-action-20 {
+    background-color: var(--ah-vilote-action-20);
+}

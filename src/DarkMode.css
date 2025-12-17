@@ -1,0 +1,273 @@
+/* ==================== DARK MODE CONFIGURATION ==================== */
+/* Import this file in your App.js AFTER App.css */
+
+/*  Global Variable Overrides */
+body.dark-mode {
+  /* --- Text Colors --- */
+  /* Main Headings -> White */
+  --ah-black-10: var(--ah-white-00);
+  /* Secondary Text -> Light Grey (using existing white-20) */
+  --ah-black-20: var(--ah-white-20);
+  /* Muted Text -> Darker Grey (using existing white-30) */
+  --ah-black-30: var(--ah-white-30);
+
+  /* --- Borders & Lines --- */
+  --ah-stroke: var(--ah-dark-stroke);
+  --ah-fill: var(--ah-bg-dark-30); /* Input fills become dark */
+
+  /* --- Base Background --- */
+  background-color: var(--ah-bg-dark-10) !important;
+  color: var(--ah-black-10);
+}
+
+/*  Layout & Containers */
+/* Sidebar and Navbar get the Deepest Navy */
+body.dark-mode .navbar-custom,
+body.dark-mode .sidebar {
+  background-color: var(--ah-bg-dark-10) !important;
+  border-color: var(--ah-dark-stroke);
+  box-shadow: none;
+}
+
+/* Content Cards get Lighter Navy */
+body.dark-mode .content-card {
+  background-color: var(--ah-bg-dark-20);
+  border: 1px solid var(--ah-dark-stroke);
+  box-shadow: none;
+}
+
+/* Sidebar Specifics */
+body.dark-mode .sidebar-link,
+body.dark-mode .sidebar-accordion-btn,
+body.dark-mode .org-dropdown-btn {
+  background-color: var(--ah-bg-dark-20);
+  color: var(--ah-white-20);
+}
+
+body.dark-mode .sidebar-link:hover,
+body.dark-mode .sidebar-accordion-btn:hover,
+body.dark-mode .org-dropdown-btn:hover {
+  background-color: var(--ah-bg-dark-30);
+  color: var(--ah-white-00);
+}
+
+body.dark-mode .sidebar-icon,
+body.dark-mode .nav-icon {
+  color: var(--ah-white-30) !important;
+}
+
+/* Active state icon becomes pure white */
+body.dark-mode .sidebar-link.active .sidebar-icon,
+body.dark-mode .sidebar-accordion-btn.active-parent .sidebar-icon {
+  color: var(--ah-white-00) !important;
+}
+
+/* Inputs & Search */
+body.dark-mode .search-input-group,
+body.dark-mode .form-control {
+  background-color: var(--ah-bg-dark-30);
+  border-color: transparent;
+  color: var(--ah-white-00);
+}
+
+body.dark-mode .search-input-group input::placeholder,
+body.dark-mode .form-control::placeholder {
+  color: var(--ah-white-30);
+}
+
+body.dark-mode .input-group-text {
+  color: var(--ah-white-30);
+}
+
+/* Tables */
+body.dark-mode .table-custom thead {
+  background-color: var(--ah-bg-dark-30);
+}
+
+body.dark-mode .table-custom th {
+  color: var(--ah-white-00);
+}
+
+body.dark-mode .table-custom td {
+  color: var(--ah-white-20);
+  border-top: 1px solid var(--ah-dark-stroke) !important;
+}
+
+body.dark-mode .table-custom tbody tr:hover {
+  background-color: var(--ah-bg-dark-30);
+}
+
+/* --- Search Input Table Specifics for Dark Mode --- */
+
+body.dark-mode .search-input-group-table {
+  background-color: var(--ah-bg-dark-30); /* Dark background */
+  border-color: var(--ah-dark-stroke);
+}
+
+body.dark-mode .search-input-group-table input,
+body.dark-mode .search-input-group-table .input-group-text {
+  color: #ffffff; /* Typed text becomes White */
+  caret-color: #ffffff; /* Blinking cursor becomes White */
+}
+
+/* Optional: Ensure placeholder text is distinct (Light Grey) */
+body.dark-mode .search-input-group-table input::placeholder {
+  color: var(--ah-black-30);
+}
+
+/*  Action Buttons */
+body.dark-mode .btn-icon {
+  color: var(--ah-white-30);
+}
+body.dark-mode .btn-icon:hover {
+  color: var(--ah-white-00);
+}
+body.dark-mode .btn-icon.delete {
+  color: var(--ah-red-action-dark-10); /* Using dark mode red var */
+}
+
+/* Profile Popover */
+body.dark-mode .profile-popover-container {
+  background-color: var(--ah-bg-dark-20);
+  border: 1px solid var(--ah-dark-stroke);
+  /* Custom shadow for dark mode depth */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .profile-popover-container .popover-arrow {
+  background-color: var(--ah-bg-dark-20);
+  border-top: 1px solid var(--ah-dark-stroke);
+  border-left: 1px solid var(--ah-dark-stroke);
+}
+
+body.dark-mode .popover-user-name {
+  color: var(--ah-white-00);
+}
+
+body.dark-mode .progress-text {
+  color: #ffffff;
+}
+
+body.dark-mode .popover-user-role,
+body.dark-mode .department-text,
+body.dark-mode .info-value {
+  color: var(--ah-white-30);
+}
+
+body.dark-mode .info-label {
+  color: var(--ah-white-20);
+}
+
+body.dark-mode .popover-footer {
+  border-top: 1px solid var(--ah-dark-stroke);
+}
+
+body.dark-mode .popover-link {
+  color: var(--ah-brand-10);
+}
+body.dark-mode .popover-link:hover {
+  color: var(--ah-white-00);
+}
+
+/*  Dashboard Specifics */
+
+/* Activity List Items */
+body.dark-mode .activity-item {
+  background-color: var(--ah-bg-dark-10);
+  border: 1px solid var(--ah-dark-stroke);
+}
+body.dark-mode .activity-item:hover {
+  border-color: var(--ah-brand-default);
+}
+
+/* Members on Leave List */
+body.dark-mode .leave-item {
+  border-bottom: 1px solid var(--ah-dark-stroke);
+}
+body.dark-mode .leave-info h6 {
+  color: var(--ah-white-00);
+}
+
+/* Calendar */
+body.dark-mode .cal-day {
+  color: var(--ah-white-30);
+}
+body.dark-mode .cal-day.active {
+  background-color: var(--ah-brand-default);
+  color: var(--ah-white-00);
+}
+
+/* Schedule */
+body.dark-mode .schedule-item {
+  background-color: var(--ah-bg-dark-30);
+  border-left: 4px solid var(--ah-brand-10);
+}
+body.dark-mode .schedule-title {
+  color: var(--ah-white-00);
+}
+body.dark-mode .schedule-time,
+body.dark-mode .schedule-sub {
+  color: var(--ah-white-30);
+}
+body.dark-mode .schedule-time {
+  border-right: 1px solid var(--ah-dark-stroke) !important;
+}
+
+/* Announcement Box */
+body.dark-mode .announcement-box {
+  background-color: var(--ah-bg-dark-30);
+}
+body.dark-mode .announcement-box textarea {
+  color: var(--ah-white-00);
+}
+body.dark-mode .announcement-box textarea::placeholder {
+  color: var(--ah-white-30);
+}
+
+/* Profile Tabs */
+body.dark-mode .profile-nav-pills {
+  background-color: var(--ah-bg-dark-30);
+}
+body.dark-mode .profile-nav-pills .nav-link {
+  color: var(--ah-white-30);
+}
+body.dark-mode .profile-nav-pills .nav-link:hover {
+  color: var(--ah-white-00);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .profile-nav-pills .nav-link.active {
+  background-color: var(--ah-brand-default);
+  color: var(--ah-white-00);
+}
+
+/* Stat Cards: Force DARK text inside pastel cards for readability */
+body.dark-mode .stat-card .stat-number,
+body.dark-mode .stat-card .stat-label {
+  color: #252525 !important; /* Hardcoded dark because card bg is pastel */
+}
+body.dark-mode .stat-card .stat-icon-circle {
+  color: #252525 !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Page Headers */
+body.dark-mode .page-header h2,
+body.dark-mode .page-header h1 {
+  color: var(--ah-white-00) !important;
+}
+
+body.dark-mode .text-muted {
+  color: var(--ah-white-30) !important;
+}
+
+body.dark-mode .badge-approve {
+  background-color: var(--ah-green-action-20);
+  color: var(--ah-green-action-10);
+}
+
+/* Left Border Logic */
+@media (min-width: 992px) {
+  body.dark-mode .border-right-lg {
+    border-right: 1px solid var(--ah-dark-stroke) !important;
+  }
+}
