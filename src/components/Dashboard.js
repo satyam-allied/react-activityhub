@@ -372,95 +372,94 @@ const Dashboard = () => {
 
         {/* Filters */}
         <div className="row mb-4">
-          <div className="col-12">
-            <div className="d-flex justify-content-between align-items-center flex-wrap">
-              {/* Search */}
-              <div
-                className="input-group search-input-group-table mb-2 mb-md-0"
-                // style={{
-                //   maxWidth: "300px",
-                //   backgroundColor: "#fff",
-                //   border: "1px solid #e5e5e5",
-                // }}
-              >
-                <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    <i className="bi bi-search"></i>
-                  </span>
-                </div>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search"
-                />
+          <div className="col-8">
+            {/* Search */}
+            <div
+              className="input-group search-input-group-table mb-2 mb-md-0"
+              // style={{
+              //   maxWidth: "300px",
+              //   backgroundColor: "#fff",
+              //   border: "1px solid #e5e5e5",
+              // }}
+            >
+              <div className="input-group-prepend">
+                <span className="input-group-text">
+                  <i className="bi bi-search"></i>
+                </span>
               </div>
-              {/* Filter Dropdowns */}
-              <div className="d-flex">
-                <div className="dropdown mr-2">
-                  <button
-                    className="btn btn-white dropdown-toggle border"
-                    type="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    style={{ fontSize: "0.85rem", color: "#666" }}
-                  >
-                    Filter Opt
-                  </button>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Option 1
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Option 2
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Option 3
-                    </a>
-                  </div>
-                </div>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+          <div className="col-4 d-flex justify-content-start align-items-center flex-wrap">
+            {/* Filter Dropdowns */}
 
-                <div className="dropdown mr-2">
-                  <button
-                    className="btn btn-white dropdown-toggle border"
-                    type="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    style={{ fontSize: "0.85rem", color: "#666" }}
-                  >
-                    Filter Opt
-                  </button>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Option A
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Option B
-                    </a>
-                  </div>
-                </div>
+            <div className="dropdown mr-2">
+              <button
+                className="btn btn-white dropdown-toggle border"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style={{ fontSize: "0.85rem", color: "#666" }}
+              >
+                Filter Opt
+              </button>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">
+                  Option 1
+                </a>
+                <a className="dropdown-item" href="#">
+                  Option 2
+                </a>
+                <a className="dropdown-item" href="#">
+                  Option 3
+                </a>
+              </div>
+            </div>
 
-                <div className="dropdown">
-                  <button
-                    className="btn btn-white dropdown-toggle border"
-                    type="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    style={{ fontSize: "0.85rem", color: "#666" }}
-                  >
-                    Filter Opt
-                  </button>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Yes
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      No
-                    </a>
-                  </div>
-                </div>
+            <div className="dropdown mr-2">
+              <button
+                className="btn btn-white dropdown-toggle border"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style={{ fontSize: "0.85rem", color: "#666" }}
+              >
+                Filter Opt
+              </button>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">
+                  Option A
+                </a>
+                <a className="dropdown-item" href="#">
+                  Option B
+                </a>
+              </div>
+            </div>
+
+            <div className="dropdown">
+              <button
+                className="btn btn-white dropdown-toggle border"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style={{ fontSize: "0.85rem", color: "#666" }}
+              >
+                Filter Opt
+              </button>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">
+                  Yes
+                </a>
+                <a className="dropdown-item" href="#">
+                  No
+                </a>
               </div>
             </div>
           </div>

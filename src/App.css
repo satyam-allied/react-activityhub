@@ -1,4 +1,4 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* @import "bootstrap/dist/css/bootstrap.min.css"; */
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -99,7 +99,7 @@ a {
 .user-name {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--ah-black-20, #333);
+  color: var(--ah-brand-default);
   line-height: 1.2;
 }
 .user-role {
@@ -543,6 +543,7 @@ input:checked + .slider:before {
 
 .btn-clock-in:hover {
   background-color: var(--ah-brand-dark-default);
+  color: var(--ah-white-00);
 }
 
 .stat-card {
