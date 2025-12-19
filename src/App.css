@@ -25,8 +25,6 @@ a {
   text-decoration: none !important;
 }
 
-
-
 /* ==================== LAYOUT ==================== */
 .layout-wrapper {
   padding-top: var(--navbar-height);
@@ -39,9 +37,6 @@ a {
     padding-left: 0;
   }
 }
-
-
-
 
 /* ==================== NAVBAR ==================== */
 .navbar-custom {
@@ -119,19 +114,16 @@ a {
 }
 
 /* Open State (X Cross Icon) */
-/* Bootstrap adds aria-expanded="true" automatically when open */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(91, 85, 230, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6L24 24M6 24L24 6'/%3e%3c/svg%3e") !important;
 }
 
-/* Optional: Remove the default border box shadow on click */
 .navbar-toggler:focus {
   box-shadow: none;
   outline: none;
 }
 
-
-/* --- POPOVER SPECIFIC STYLES (MATCHING THE IMAGE) --- */
+/* --- POPOVER SPECIFIC STYLES --- */
 .profile-popover-container {
   position: absolute;
   top: calc(100% + 15px);
@@ -154,7 +146,7 @@ a {
 .popover-user-role {
   font-size: 0.85rem;
   color: #888;
-  display: block; /* Ensures it sits below the name */
+  display: block;
 }
 
 /* Green Active Badge */
@@ -165,8 +157,8 @@ a {
   font-weight: 500;
 }
 .status-badge.active {
-  background-color: #dcfce7; /* Light Green */
-  color: #22c55e; /* Dark Green Text */
+  background-color: #dcfce7;
+  color: #22c55e;
 }
 
 /* Labels & Values */
@@ -179,7 +171,7 @@ a {
 }
 .info-value {
   font-size: 0.9rem;
-  color: #666; /* Gray text for values */
+  color: #666;
   font-weight: 400;
 }
 .department-text {
@@ -195,13 +187,13 @@ a {
 }
 .custom-progress-bar {
   height: 6px;
-  background-color: #f0f0f5; /* Light gray background */
+  background-color: #f0f0f5;
   border-radius: 10px;
   overflow: hidden;
 }
 .progress-fill {
   height: 100%;
-  background-color: #5b55e6; /* Purple Fill */
+  background-color: #5b55e6;
   border-radius: 10px;
 }
 
@@ -217,7 +209,7 @@ a {
   font-weight: 500;
 }
 .theme-label.active {
-  color: #5b55e6; /* Active label (Light) is purple/blue */
+  color: #5b55e6;
   font-weight: 700;
 }
 /* The Switch Toggle */
@@ -314,8 +306,7 @@ input:checked + .slider:before {
   }
 }
 
-
-/* ==================== MOBILE FIXES (from previous step) ==================== */
+/* ==================== MOBILE FIXES ==================== */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     position: absolute;
@@ -329,7 +320,8 @@ input:checked + .slider:before {
     max-height: 80vh;
     overflow-y: auto;
   }
-  .navbar-nav.ml-auto {
+  /* Updated to .ms-auto for Bootstrap 5 */
+  .navbar-nav.ms-auto {
     margin-left: 0 !important;
     flex-direction: column;
     width: 100%;
@@ -340,7 +332,7 @@ input:checked + .slider:before {
     width: 100%;
   }
   .profile-popover-container {
-    position: static; /* Stack naturally on mobile */
+    position: static;
     width: 100%;
     box-shadow: none !important;
     border: 1px solid #f0f0f0;
@@ -357,7 +349,6 @@ input:checked + .slider:before {
   }
 }
 
-
 /* ==================== SIDEBAR ==================== */
 .sidebar {
   position: fixed;
@@ -366,7 +357,6 @@ input:checked + .slider:before {
   bottom: 0;
   width: var(--sidebar-width);
   background-color: var(--ah-white-00);
-  /* border-right: 1px solid var(--ah-stroke); */
   padding: 20px 15px;
   overflow-y: auto;
   z-index: 1020;
@@ -391,7 +381,6 @@ input:checked + .slider:before {
 .sidebar-link,
 .sidebar-accordion-btn {
   width: 100%;
-  /* Replaced #f3eefc with your brand-30 variable */
   background-color: var(--ah-brand-30);
   color: var(--ah-black-10);
   font-weight: 500;
@@ -418,7 +407,6 @@ input:checked + .slider:before {
 .sidebar-link:hover,
 .sidebar-accordion-btn:hover,
 .org-dropdown-btn:hover {
-  /* Replaced #eadaff with your brand-20 variable */
   background-color: var(--ah-brand-20);
   color: var(--ah-black-20);
 }
@@ -430,15 +418,11 @@ input:checked + .slider:before {
 }
 
 /* Accordion Animation */
-/* Arrow Animation: Rotate when expanded */
-/* Bootstrap removes the 'collapsed' class when open, so we rotate by default */
-/* OR we use aria-expanded which Bootstrap toggles automatically */
-
 .sidebar-accordion-btn .bi-chevron-down {
   transition: transform 0.3s ease;
 }
 
-/* When Bootstrap opens the menu, it sets aria-expanded="true" */
+/* BS5 sets aria-expanded="true" automatically */
 .sidebar-accordion-btn[aria-expanded="true"] .bi-chevron-down {
   transform: rotate(180deg);
 }
@@ -449,7 +433,6 @@ input:checked + .slider:before {
   color: var(--ah-black-30);
   font-size: 0.9rem;
   text-decoration: none !important;
-  /* border-radius: 6px; */
   margin-bottom: 4px;
   width: 80%;
   margin-left: 15%;
@@ -460,17 +443,13 @@ input:checked + .slider:before {
   color: var(--ah-bg-dark-30) !important;
 }
 
-
 /* ==================== ACTIVE STATES ==================== */
-
-/* Active Child Link (e.g., "Users" or "Departments") */
 .child-link.active {
   color: var(--ah-brand-default) !important;
   border-left: 1px solid var(--ah-brand-default);
   font-weight: 500;
 }
 
-/* Active Dashboard Link */
 .sidebar-link.active {
   color: var(--ah-bg-light) !important;
   background-color: var(--ah-brand-default);
@@ -480,7 +459,6 @@ input:checked + .slider:before {
   }
 }
 
-/* Optional: Active Parent Button (e.g., "Organisation" when "Roles" is active) */
 .sidebar-accordion-btn.active-parent {
   color: var(--ah-bg-light);
   background-color: var(--ah-brand-default);
@@ -551,25 +529,20 @@ input:checked + .slider:before {
   border-radius: 12px;
   padding: 12px;
   height: 100%;
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Stats Backgrounds using Variables */
 .bg-orange-light {
   background-color: var(--ah-orange-20);
 }
-
 .bg-blue-light {
   background-color: var(--ah-blue-action-20);
 }
-
 .bg-purple-light {
   background-color: var(--ah-violet-20);
 }
-
 .bg-green-light {
   background-color: var(--ah-green-action-20);
 }
@@ -622,11 +595,10 @@ input:checked + .slider:before {
 
 .card-title-link:hover {
   color: var(--ah-black-10) !important;
-  text-decoration: none;
 }
 
 .activity-item {
-  background: var(--ah-bg-light); 
+  background: var(--ah-bg-light);
   border-radius: 8px;
   padding: 12px 15px;
   margin-bottom: 10px;
@@ -641,19 +613,15 @@ input:checked + .slider:before {
   margin-bottom: 0;
 }
 
-/* Action Text Colors using Variables */
 .activity-number.text-orange {
   color: var(--ah-orange-10);
 }
-
 .activity-number.text-blue {
   color: var(--ah-blue-10);
 }
-
 .activity-number.text-purple {
   color: var(--ah-violet-10);
 }
-
 .activity-number.text-green {
   color: var(--ah-green-action-20);
 }
@@ -782,7 +750,6 @@ input:checked + .slider:before {
   background-color: var(--ah-brand-30);
   padding: 15px;
   border-radius: 12px;
-  /* height: 100%; */
   min-height: 150px;
 }
 
@@ -845,21 +812,20 @@ input:checked + .slider:before {
 }
 
 .event-badge-show {
-  flex: 1; /* equal width */
+  flex: 1;
   text-align: center;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 500;
-  white-space: nowrap; /* keeps text in one line */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* safety if screen is very small */
+  text-overflow: ellipsis;
 }
 
 .flex-08 {
   flex: 0.8;
 }
-
 .flex-12 {
   flex: 1.2;
 }
@@ -904,14 +870,10 @@ input:checked + .slider:before {
   }
 }
 
-
-
 /* ==================== COMMON TABLE STYLES ==================== */
-
-/* --- Main Table Structure --- */
 .table-custom {
   margin-bottom: 0;
-  border-collapse: separate; /* Optional: Helps with spacing if needed */
+  border-collapse: separate;
   border-spacing: 0;
 }
 
@@ -920,7 +882,7 @@ input:checked + .slider:before {
 }
 
 .table-custom th {
-  border: none; /* Removes borders from header */
+  border: none;
   padding: 12px 16px;
   font-weight: 600;
   color: var(--ah-black-10);
@@ -929,7 +891,6 @@ input:checked + .slider:before {
   text-transform: uppercase;
 }
 
-/* Rounded corners for the header row */
 .table-custom th:first-child {
   border-radius: 8px 0 0 8px;
   padding-left: 24px;
@@ -942,7 +903,6 @@ input:checked + .slider:before {
 
 .table-custom td {
   vertical-align: middle;
-  /* CHANGE HERE: Set border-top to none to remove the line between rows */
   border-top: none !important;
   border-bottom: none;
   padding: 12px 16px;
@@ -954,7 +914,6 @@ input:checked + .slider:before {
   padding-left: 24px;
 }
 
-/* Hover Effect for Rows */
 .table-custom tbody tr {
   transition: background-color 0.2s ease;
 }
@@ -962,21 +921,9 @@ input:checked + .slider:before {
   background-color: var(--ah-bg-light);
 }
 
-/* UPDATED: Specific rule to remove Bootstrap's header border */
 .table-custom thead th {
-  border-bottom: none !important; /* !important forces override of Bootstrap default */
+  border-bottom: none !important;
   border-top: none !important;
-}
-
-/* Update your existing generic th rule to this: */
-.table-custom th {
-  border: none;
-  padding: 12px 16px;
-  font-weight: 600;
-  color: var(--ah-black-10);
-  font-size: 0.9rem;
-  vertical-align: middle;
-  text-transform: uppercase;
 }
 
 /* search box */
@@ -996,7 +943,7 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-/* --- Action Buttons (Edit, View, Delete) --- */
+/* --- Action Buttons --- */
 .action-btn-group {
   display: flex;
   justify-content: center;
@@ -1010,7 +957,7 @@ input:checked + .slider:before {
   margin-right: 12px;
   font-size: 1rem;
   transition: all 0.2s ease;
-  color: var(--ah-black-20); /* Using existing black-30 variable */
+  color: var(--ah-black-20);
 }
 
 .btn-icon:last-child {
@@ -1018,63 +965,56 @@ input:checked + .slider:before {
 }
 
 .btn-icon:hover {
-  color: var(--ah-brand-default); /* Using existing brand-default variable */
+  color: var(--ah-brand-default);
   transform: scale(1.1);
 }
 
-/* Specific Delete Button Style */
 .btn-icon.delete {
   color: #ffb3b3;
 }
 
 .btn-icon.delete:hover {
-  color: var(--ah-red-action-10); /* Using existing red-action-10 variable */
+  color: var(--ah-red-action-10);
 }
 
-/* --- Primary Create Button (e.g., "+ Create Tag") --- */
+/* --- Primary Create Button --- */
 .btn-create {
-  background-color: var(--ah-brand-default); /* Using existing brand-default variable */
-  color: var(--ah-white-00) !important; /* Using existing white-00 variable */
+  background-color: var(--ah-brand-default);
+  color: var(--ah-white-00) !important;
   border: none;
   border-radius: 10px;
   padding: 12px 20px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  /* width: 100%; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .btn-create:hover {
-  background-color: var(--ah-white-00); /* Using existing brand-dark-default variable */
+  background-color: var(--ah-white-00);
   color: var(--ah-brand-default) !important;
   box-shadow: 0 4px 12px rgba(88, 86, 214, 0.2);
   border: 1px solid var(--ah-brand-default);
 }
 
 .btn-cancel {
-  background-color: var(
-    --ah-fill
-  ); /* Using existing brand-default variable */
-  color: var(--ah-white-00); /* Using existing white-00 variable */
+  background-color: var(--ah-fill);
+  color: var(--ah-white-00);
   border: none;
   border-radius: 10px;
   padding: 12px 20px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  /* width: 100%; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .btn-cancel:hover {
-  background-color: var(
-    --ah-white-00
-  ); /* Using existing brand-dark-default variable */
+  background-color: var(--ah-white-00);
   color: var(--ah-fill);
   box-shadow: 0 4px 12px rgba(88, 86, 214, 0.2);
   border: 1px solid var(--ah-fill);
@@ -1092,20 +1032,13 @@ input:checked + .slider:before {
   text-transform: capitalize;
 }
 
-/* Status Variations leveraging existing classes */
-/* .bg-active is already defined in your CSS */
-/* .bg-draft is already defined in your CSS */
-/* .bg-ongoing is already defined in your CSS */
-/* .bg-cancelled is already defined in your CSS */
-
 .bg-archived {
-  background-color: var(--ah-yellow-action-20); /* Light Yellow/Orange BG */
-  color: var(--ah-yellow-action-10); /* Darker Yellow/Brown Text */
+  background-color: var(--ah-yellow-action-20);
+  color: var(--ah-yellow-action-10);
 }
 
-/* Additional status variation if needed */
 .status-inactive {
-  background-color: var(--ah-grey-action-20); /* Reuse grey action */
+  background-color: var(--ah-grey-action-20);
   color: var(--ah-grey-action-10);
 }
 
@@ -1117,9 +1050,9 @@ input:checked + .slider:before {
   align-items: center;
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--ah-stroke); /* Using existing stroke variable */
+  border-top: 1px solid var(--ah-stroke);
   font-size: 0.85rem;
-  color: var(--ah-black-20); /* Using existing black-20 variable */
+  color: var(--ah-black-20);
 }
 
 .footer-group {
@@ -1138,160 +1071,31 @@ input:checked + .slider:before {
   height: 30px;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid var(--ah-stroke); /* Using existing stroke variable */
+  border: 1px solid var(--ah-stroke);
   margin-left: 8px;
   background-color: transparent;
-  color: var(--ah-black-10); /* Using existing black-10 variable */
+  color: var(--ah-black-10);
 }
 
 .pagination-btn {
   border: none;
   background: transparent;
-  color: var(--ah-black-30); /* Using existing black-30 variable */
+  color: var(--ah-black-30);
   padding: 4px 8px;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
 .pagination-btn:hover {
-  color: var(--ah-brand-default); /* Using existing brand-default variable */
+  color: var(--ah-brand-default);
 }
 
-/* ==================== TABLE STYLES ==================== */
-
-/* --- Toolbar (Top Icons) --- */
-.table-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 4px; /* Tight spacing between icons */
-}
-
-.toolbar-btn {
-  border: none;
-  background: transparent;
-  color: var(--ah-black-20, #6c757d); /* Fallback color included */
-  padding: 8px 10px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  line-height: 1;
-  font-size: 1.1rem;
-}
-
-.toolbar-btn:hover {
-  background-color: var(--ah-bg-light, #f8f9fa);
-  color: var(--ah-brand-default, #5856d6);
-}
-
-.toolbar-divider {
-  width: 1px;
-  height: 20px;
-  background-color: var(--ah-stroke, #dee2e6);
-  margin: 0 8px;
-}
-
-/* --- Search Box Customization --- */
-.search-input-group-table {
-  background-color: var(--ah-white-00, #fff);
-  border-radius: 8px;
-  padding: 4px 10px;
-  border: 1px solid var(--ah-stroke, #dee2e6);
-  display: flex;
-  align-items: center;
-}
-.search-input-group-table input:focus {
-  box-shadow: none;
-}
-
-/* --- Action Buttons (Edit/View/Delete) --- */
-.action-btn-group {
-  display: flex;
-  align-items: center;
-}
-.btn-icon {
-  border: none;
-  background: transparent;
-  padding: 4px 8px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  color: #6c757d;
-}
-.btn-icon:hover {
-  color: #5856d6;
-  transform: scale(1.1);
-}
-.btn-icon.delete {
-  color: #ffb3b3;
-}
-.btn-icon.delete:hover {
-  color: #dc3545;
-}
-
-/* --- Create Button --- */
-.btn-create {
-  background-color: #5856d6;
-  color: white !important;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-.btn-create:hover {
-  background-color: #4b49b6;
-}
-
-/* --- Pagination Footer --- */
-.table-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-  font-size: 0.85rem;
-  color: #6c757d;
-}
-.footer-group {
-  display: flex;
-  align-items: center;
-  margin-right: 1.5rem;
-}
-.page-input {
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid #dee2e6;
-  margin-left: 8px;
-}
-.pagination-btn {
-  border: none;
-  background: transparent;
-  color: #6c757d;
-  padding: 4px 8px;
-  font-size: 0.9rem;
-}
-.pagination-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.pagination-btn:not(:disabled):hover {
-  color: #5856d6;
-}
-
-
-/* ==================== Account PAGE STYLES ==================== */
-
-/* Custom Tabs Styling (Gray Strip) */
+/* ==================== ACCOUNT PAGE STYLES ==================== */
 .profile-nav-pills {
-  background-color: var(--ah-white-10, #f5f5f5); /* Light gray background */
+  background-color: var(--ah-white-10, #f5f5f5);
   border-radius: 8px;
   padding: 0;
-  overflow: hidden; /* Ensures rounded corners clip the buttons */
+  overflow: hidden;
 }
 
 .profile-nav-pills .nav-item {
@@ -1302,7 +1106,7 @@ input:checked + .slider:before {
   color: var(--ah-black-10);
   font-weight: 600;
   font-size: 0.9rem;
-  border-radius: 0; /* Remove default pill roundness */
+  border-radius: 0;
   padding: 1rem 0.5rem;
   transition: all 0.2s ease;
   background-color: transparent;
@@ -1312,13 +1116,11 @@ input:checked + .slider:before {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Active State (Purple) */
 .profile-nav-pills .nav-link.active {
-  background-color: var(--ah-brand-10); /* Lighter purple background */
-  color: var(--ah-brand-dark-default); /* Dark purple text */
+  background-color: var(--ah-brand-10);
+  color: var(--ah-brand-dark-default);
 }
 
-/* Utility to bold labels */
 .font-weight-500 {
   font-weight: 500;
 }
@@ -1334,30 +1136,23 @@ input:checked + .slider:before {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Vertical Line Separator (Desktop Only) */
+/* Renamed to .border-end-lg for Bootstrap 5 */
 @media (min-width: 992px) {
-  .border-right-lg {
+  .border-end-lg {
     border-right: 1px solid var(--ah-stroke);
   }
 }
 
-
-
-
 /* ==================== COMMON FORM STYLES ==================== */
-/* Use these for all Create/Edit pages */
-
-/* Section Headings (The blue links style) */
 .form-section-heading {
-  color: var(--ah-brand-default); /* Your primary purple/blue */
+  color: var(--ah-brand-default);
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1rem;
   display: inline-block;
-  cursor: pointer; /* Makes it look interactive like the image */
+  cursor: pointer;
 }
 
-/* Form Labels */
 .form-label-custom {
   font-size: 0.9rem;
   font-weight: 500;
@@ -1366,12 +1161,11 @@ input:checked + .slider:before {
   display: block;
 }
 
-/* Common Inputs (Light Grey Background) */
 .form-control-custom {
-  background-color: var(--ah-white-10); /* Light Grey variable */
+  background-color: var(--ah-white-10);
   border: 1px solid var(--ah-stroke);
   border-radius: 4px;
-  height: 45px; /* Taller inputs per design */
+  height: 45px;
   font-size: 0.9rem;
   color: var(--ah-black-10);
   padding: 0.5rem 0.75rem;
@@ -1383,11 +1177,10 @@ input:checked + .slider:before {
   border-color: var(--ah-brand-default);
 }
 
-/* Input Groups with Icons (Date/Time pickers) */
 .input-group-custom .form-control {
   background-color: var(--ah-white-10);
   border: 1px solid var(--ah-stroke);
-  border-right: none; /* Connect to icon */
+  border-right: none;
   height: 45px;
   font-size: 0.9rem;
   color: var(--ah-black-10);
@@ -1396,24 +1189,40 @@ input:checked + .slider:before {
 .input-group-custom .input-group-text {
   background-color: var(--ah-white-10);
   border: 1px solid var(--ah-stroke);
-  border-left: none; /* Connect to input */
+  border-left: none;
 }
 
-/* Dividers */
 .form-divider {
   border-top: 1px solid var(--ah-stroke);
   margin: 2rem 0;
 }
 
-/* Custom Checkbox/Radio Colors */
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color: var(--ah-brand-default);
+/* --- BOOTSTRAP 5 FORM CHECK/SWITCH OVERRIDES --- */
+
+/* Checked state for generic Checkboxes/Radios */
+.form-check-input:checked {
   background-color: var(--ah-brand-default);
+  border-color: var(--ah-brand-default);
+}
+
+/* Toggle Switches */
+.form-switch .form-check-input {
+  width: 2.5em; /* Slightly wider */
+}
+
+/* Checked state for Toggle Switches */
+.form-switch .form-check-input:checked {
+  background-color: var(--ah-brand-default);
+  border-color: var(--ah-brand-default);
+}
+
+/* Focus state ring color (Optional, matches brand) */
+.form-check-input:focus {
+  border-color: var(--ah-brand-20);
+  box-shadow: 0 0 0 0.25rem rgba(91, 85, 230, 0.25);
 }
 
 /* ==================== DARK MODE FORM OVERRIDES ==================== */
-/* Ensure forms look good in dark mode automatically */
-
 body.dark-mode .form-label-custom {
   color: #fff;
 }
@@ -1421,15 +1230,15 @@ body.dark-mode .form-label-custom {
 body.dark-mode .form-control-custom,
 body.dark-mode .input-group-custom .form-control,
 body.dark-mode .input-group-custom .input-group-text {
-  background-color: var(--ah-bg-dark-30); /* Darker fill */
+  background-color: var(--ah-bg-dark-30);
   border-color: var(--ah-dark-stroke);
   color: #fff;
 }
 
-body.dark-mode .custom-control-label {
-  color: #e1e1e1; /* Light text for checkboxes */
+body.dark-mode .form-check-label {
+  color: #e1e1e1;
 }
 
 body.dark-mode .form-section-heading {
-  color: var(--ah-brand-10); /* Lighter purple for visibility */
+  color: var(--ah-brand-10);
 }

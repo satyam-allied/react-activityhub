@@ -7,17 +7,18 @@ const Profile = () => {
       {/* --- Breadcrumbs --- */}
       <div className="row mb-4">
         <div className="col-12">
-        <div className="page-header">
+          <div className="page-header">
             <div className="page-title">Account</div>
           </div>
           <div className="breadcrumb-custom">
             breadcrumbs \ breadcrumbs \ breadcrumbs \{" "}
-            <span className="text-dark font-weight-bold">Accounts</span>
+            {/* Changed font-weight-bold to fw-bold */}
+            <span className="text-dark fw-bold">Accounts</span>
           </div>
         </div>
       </div>
 
-      {/* --- Bootstrap 4.6 Nav Tabs (Pills Style) --- */}
+      {/* --- Bootstrap 5 Nav Tabs --- */}
       <div className="row mb-4">
         <div className="col-12">
           <ul
@@ -29,7 +30,8 @@ const Profile = () => {
               <a
                 className="nav-link active"
                 id="about-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#about"
                 role="tab"
                 aria-controls="about"
@@ -42,7 +44,8 @@ const Profile = () => {
               <a
                 className="nav-link"
                 id="activity-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#activity"
                 role="tab"
                 aria-controls="activity"
@@ -55,7 +58,8 @@ const Profile = () => {
               <a
                 className="nav-link"
                 id="attendance-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#attendance"
                 role="tab"
                 aria-controls="attendance"
@@ -68,7 +72,8 @@ const Profile = () => {
               <a
                 className="nav-link"
                 id="leave-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#leave"
                 role="tab"
                 aria-controls="leave"
@@ -81,7 +86,8 @@ const Profile = () => {
               <a
                 className="nav-link"
                 id="dummy1-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#dummy1"
                 role="tab"
                 aria-controls="dummy1"
@@ -94,7 +100,8 @@ const Profile = () => {
               <a
                 className="nav-link"
                 id="dummy2-tab"
-                data-toggle="tab"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="tab"
                 href="#dummy2"
                 role="tab"
                 aria-controls="dummy2"
@@ -117,13 +124,15 @@ const Profile = () => {
           aria-labelledby="about-tab"
         >
           <div className="content-card shadow-20-light p-4">
-            <h5 className="mb-4 font-weight-bold" style={{ fontSize: "1rem" }}>
+            {/* Changed font-weight-bold to fw-bold */}
+            <h5 className="mb-4 fw-bold" style={{ fontSize: "1rem" }}>
               Personal Details
             </h5>
 
             <div className="row">
               {/* Left Column: Avatar & Side Menu */}
-              <div className="col-lg-3 mb-4 mb-lg-0 border-right-lg">
+              {/* Changed border-right-lg to border-end-lg */}
+              <div className="col-lg-3 mb-4 mb-lg-0 border-end-lg">
                 <div className="text-center mb-4">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/d/d7/Harry_Potter_character_poster.jpg"
@@ -151,14 +160,16 @@ const Profile = () => {
               </div>
 
               {/* Right Column: Information Grid */}
-              <div className="col-lg-9 pl-lg-5">
+              {/* Changed pl-lg-5 to ps-lg-5 */}
+              <div className="col-lg-9 ps-lg-5">
                 <div className="row">
                   {/* Row 1 */}
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">
                       Name
                     </label>
-                    <div className="font-weight-bold small-font-14">
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">
                       Albus Dumbledore
                     </div>
                   </div>
@@ -166,23 +177,20 @@ const Profile = () => {
                     <label className="text-muted small d-block mb-1">
                       Date of Birth
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      August, 27 1954
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">August, 27 1954</div>
                   </div>
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">
                       Gender
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      Male
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">Male</div>
                   </div>
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">Age</label>
-                    <div className="font-weight-bold small-font-14">
-                      68
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">68</div>
                   </div>
 
                   {/* Row 2 */}
@@ -190,32 +198,30 @@ const Profile = () => {
                     <label className="text-muted small d-block mb-1">
                       Country
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      USA
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">USA</div>
                   </div>
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">
                       State
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      New York
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">New York</div>
                   </div>
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">
                       City
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      Manhattan
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">Manhattan</div>
                   </div>
                   <div className="col-md-3 mb-4">
                     <label className="text-muted small d-block mb-1">
                       Address
                     </label>
                     <div
-                      className="font-weight-bold small-font-14"
+                      // Changed font-weight-bold to fw-bold
+                      className="fw-bold small-font-14"
                       style={{ lineHeight: "1.4" }}
                     >
                       1600 Pennsylvania Avenue
@@ -229,7 +235,8 @@ const Profile = () => {
                     <label className="text-muted small d-block mb-1">
                       Time Zone
                     </label>
-                    <div className="font-weight-bold small-font-14">
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">
                       America/st_Johns
                     </div>
                   </div>
@@ -237,15 +244,15 @@ const Profile = () => {
                     <label className="text-muted small d-block mb-1">
                       Contact Number
                     </label>
-                    <div className="font-weight-bold small-font-14">
-                      +1 888 888 888
-                    </div>
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">+1 888 888 888</div>
                   </div>
                   <div className="col-md-6 mb-4">
                     <label className="text-muted small d-block mb-1">
                       Email
                     </label>
-                    <div className="font-weight-bold small-font-14">
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <div className="fw-bold small-font-14">
                       Headmaster@Hogwarts.com
                     </div>
                   </div>

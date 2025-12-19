@@ -14,20 +14,24 @@ const Dashboard = () => {
         </div>
         <div className="col-lg-4 mb-4">
           <div className="clock-in-box d-flex flex-row justify-content-end align-items-center h-100">
-            <div className="text-right mr-3 clock-time">
-              <div className="font-weight-bold">3:30 pm</div>
+            {/* Changed text-right to text-end, mr-3 to me-3 */}
+            <div className="text-end me-3 clock-time">
+              {/* Changed font-weight-bold to fw-bold */}
+              <div className="fw-bold">3:30 pm</div>
               <div>Wednesday</div>
               <div style={{ fontSize: "0.7rem" }}>Clock in at : 9:00 am</div>
             </div>
             <button className="btn btn-clock-in">
-              <i className="bi bi-box-arrow-in-right mr-2"></i> Clock In
+              {/* Changed mr-2 to me-2 */}
+              <i className="bi bi-box-arrow-in-right me-2"></i> Clock In
             </button>
           </div>
         </div>
         <div className="col-lg-12">
           <div className="breadcrumb-custom">
             breadcrumbs \ breadcrumbs \ breadcrumbs \{" "}
-            <span className="text-dark font-weight-bold">breadcrumbs</span>
+            {/* Changed font-weight-bold to fw-bold */}
+            <span className="text-dark fw-bold">breadcrumbs</span>
           </div>
         </div>
       </div>
@@ -39,7 +43,8 @@ const Dashboard = () => {
             <div className="stat-icon-circle">
               <i className="bi bi-person-fill"></i>
             </div>
-            <div className="text-right">
+            {/* Changed text-right to text-end */}
+            <div className="text-end">
               <div className="stat-number">450</div>
               <div className="stat-label">Number Of Members</div>
             </div>
@@ -50,7 +55,8 @@ const Dashboard = () => {
             <div className="stat-icon-circle">
               <i className="bi bi-person-badge"></i>
             </div>
-            <div className="text-right">
+            {/* Changed text-right to text-end */}
+            <div className="text-end">
               <div className="stat-number">100</div>
               <div className="stat-label">Number Of Coaches</div>
             </div>
@@ -61,7 +67,8 @@ const Dashboard = () => {
             <div className="stat-icon-circle">
               <i className="bi bi-person-plus-fill"></i>
             </div>
-            <div className="text-right">
+            {/* Changed text-right to text-end */}
+            <div className="text-end">
               <div className="stat-number">003</div>
               <div className="stat-label">New Joiners</div>
             </div>
@@ -72,7 +79,8 @@ const Dashboard = () => {
             <div className="stat-icon-circle">
               <i className="bi bi-calendar-check"></i>
             </div>
-            <div className="text-right">
+            {/* Changed text-right to text-end */}
+            <div className="text-end">
               <div className="stat-number">004</div>
               <div className="stat-label">Holidays This Month</div>
             </div>
@@ -140,7 +148,8 @@ const Dashboard = () => {
               <div className="d-flex align-items-center">
                 <img
                   src="https://ui-avatars.com/api/?name=Francis+Tran&background=random"
-                  className="leave-avatar mr-3"
+                  // Changed mr-3 to me-3
+                  className="leave-avatar me-3"
                   alt="u"
                 />
                 <div className="leave-info">
@@ -159,7 +168,8 @@ const Dashboard = () => {
               <div className="d-flex align-items-center">
                 <img
                   src="https://ui-avatars.com/api/?name=Katherine+Webster&background=random"
-                  className="leave-avatar mr-3"
+                  // Changed mr-3 to me-3
+                  className="leave-avatar me-3"
                   alt="u"
                 />
                 <div className="leave-info">
@@ -178,7 +188,8 @@ const Dashboard = () => {
               <div className="d-flex align-items-center">
                 <img
                   src="https://ui-avatars.com/api/?name=Francis+Tran&background=random"
-                  className="leave-avatar mr-3"
+                  // Changed mr-3 to me-3
+                  className="leave-avatar me-3"
                   alt="u"
                 />
                 <div className="leave-info">
@@ -197,7 +208,8 @@ const Dashboard = () => {
               <div className="d-flex align-items-center">
                 <img
                   src="https://ui-avatars.com/api/?name=Eva&background=random"
-                  className="leave-avatar mr-3"
+                  // Changed mr-3 to me-3
+                  className="leave-avatar me-3"
                   alt="u"
                 />
                 <div className="leave-info">
@@ -219,7 +231,8 @@ const Dashboard = () => {
           <div className="content-card shadow-20-light">
             <div className="d-flex justify-content-between mb-3">
               <i className="bi bi-chevron-left"></i>
-              <span className="font-weight-bold">November 2025</span>
+              {/* Changed font-weight-bold to fw-bold */}
+              <span className="fw-bold">November 2025</span>
               <i className="bi bi-chevron-right"></i>
             </div>
             <div className="calendar-strip">
@@ -247,7 +260,7 @@ const Dashboard = () => {
             </div>
 
             <div className="d-flex justify-content-between align-items-center mb-2">
-              <span className="small font-weight-bold">Today's Schedule</span>
+              <span className="small fw-bold">Today's Schedule</span>
               <a href="#see" className="small">
                 See All
               </a>
@@ -255,7 +268,8 @@ const Dashboard = () => {
 
             <div className="schedule-item">
               <div className="d-flex">
-                <div className="schedule-time mr-3 border-right pr-3">
+                {/* Changed mr-3 to me-3, border-right to border-end, pr-3 to pe-3 */}
+                <div className="schedule-time me-3 border-end pe-3">
                   03:00pm - 4:30pm
                 </div>
                 <div>
@@ -266,7 +280,8 @@ const Dashboard = () => {
             </div>
             <div className="schedule-item">
               <div className="d-flex">
-                <div className="schedule-time mr-3 border-right pr-3">
+                {/* Changed mr-3 to me-3, border-right to border-end, pr-3 to pe-3 */}
+                <div className="schedule-time me-3 border-end pe-3">
                   03:00pm - 4:30pm
                 </div>
                 <div>
@@ -277,7 +292,8 @@ const Dashboard = () => {
             </div>
 
             <button className="btn-add-schedule mt-2">
-              <i className="bi bi-plus-circle-fill mr-1"></i> Add Schedule
+              {/* Changed mr-1 to me-1 */}
+              <i className="bi bi-plus-circle-fill me-1"></i> Add Schedule
             </button>
           </div>
         </div>
@@ -325,8 +341,9 @@ const Dashboard = () => {
                     <td>05 Days</td>
                     <td>Casual Leave</td>
                     <td>
+                      {/* Changed badge-danger to bg-danger (though inline style overrides color) */}
                       <span
-                        className="badge badge-danger px-3 py-2"
+                        className="badge bg-danger px-3 py-2"
                         style={{ backgroundColor: "#fbd8dc", color: "#7d0727" }}
                       >
                         Rejected
@@ -349,7 +366,8 @@ const Dashboard = () => {
                 placeholder="Write your announcement here"
               ></textarea>
               <div className="d-flex justify-content-end mt-2">
-                <button className="btn btn-pill btn-grey mr-5">Clear</button>
+                {/* Changed mr-5 to me-5 */}
+                <button className="btn btn-pill btn-grey me-5">Clear</button>
                 <button className="btn btn-pill btn-blue" style={{}}>
                   Send
                 </button>
@@ -374,19 +392,11 @@ const Dashboard = () => {
         <div className="row mb-4">
           <div className="col-8">
             {/* Search */}
-            <div
-              className="input-group search-input-group-table mb-2 mb-md-0"
-              // style={{
-              //   maxWidth: "300px",
-              //   backgroundColor: "#fff",
-              //   border: "1px solid #e5e5e5",
-              // }}
-            >
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <i className="bi bi-search"></i>
-                </span>
-              </div>
+            <div className="input-group search-input-group-table mb-2 mb-md-0">
+              {/* Removed input-group-prepend wrapper div */}
+              <span className="input-group-text">
+                <i className="bi bi-search"></i>
+              </span>
               <input
                 type="text"
                 className="form-control"
@@ -397,11 +407,13 @@ const Dashboard = () => {
           <div className="col-4 d-flex justify-content-start align-items-center flex-wrap">
             {/* Filter Dropdowns */}
 
-            <div className="dropdown mr-2">
+            {/* Changed mr-2 to me-2 */}
+            <div className="dropdown me-2">
               <button
                 className="btn btn-white dropdown-toggle border"
                 type="button"
-                data-toggle="dropdown"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 style={{ fontSize: "0.85rem", color: "#666" }}
@@ -421,11 +433,13 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="dropdown mr-2">
+            {/* Changed mr-2 to me-2 */}
+            <div className="dropdown me-2">
               <button
                 className="btn btn-white dropdown-toggle border"
                 type="button"
-                data-toggle="dropdown"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 style={{ fontSize: "0.85rem", color: "#666" }}
@@ -446,7 +460,8 @@ const Dashboard = () => {
               <button
                 className="btn btn-white dropdown-toggle border"
                 type="button"
-                data-toggle="dropdown"
+                // Changed data-toggle to data-bs-toggle
+                data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
                 style={{ fontSize: "0.85rem", color: "#666" }}
@@ -479,27 +494,33 @@ const Dashboard = () => {
               </div>
               <div className="p-3">
                 <div className="mb-3 d-flex">
-                  <span className="event-badge-show bg-ongoing mr-2 flex-08">
+                  {/* Changed mr-2 to me-2 */}
+                  <span className="event-badge-show bg-ongoing me-2 flex-08">
                     Ongoing
                   </span>
                   <span className="event-badge-show bg-ah-fill flex-12">
                     Open For Staff Only
                   </span>
                 </div>
-                <h6 className="font-weight-bold mb-3 pb-2 border-bottom">
+                {/* Changed font-weight-bold to fw-bold */}
+                <h6 className="fw-bold mb-3 pb-2 border-bottom">
                   Coach Meeting
                 </h6>
                 <div className="d-flex align-items-center">
-                  <div className="mr-3 text-center">
-                    <h3 className="font-weight-bold mb-0 text-dark">01</h3>
-                    <h6 className="font-weight-bold">Dec</h6>
+                  {/* Changed mr-3 to me-3 */}
+                  <div className="me-3 text-center">
+                    {/* Changed font-weight-bold to fw-bold */}
+                    <h3 className="fw-bold mb-0 text-dark">01</h3>
+                    <h6 className="fw-bold">Dec</h6>
                   </div>
                   <div className="small-font">
                     <div className="pb-1">
-                      <i className="bi bi-geo-alt mr-1"></i> Head Coach Cabin
+                      {/* Changed mr-1 to me-1 */}
+                      <i className="bi bi-geo-alt me-1"></i> Head Coach Cabin
                     </div>
                     <div className="pb-1">
-                      <i className="bi bi-clock mr-1"></i> 9:30 am - 1:30 pm
+                      {/* Changed mr-1 to me-1 */}
+                      <i className="bi bi-clock me-1"></i> 9:30 am - 1:30 pm
                     </div>
                   </div>
                 </div>
@@ -519,27 +540,28 @@ const Dashboard = () => {
               </div>
               <div className="p-3">
                 <div className="mb-3 d-flex">
-                  <span className="event-badge-show bg-active mr-2">
+                  {/* Changed mr-2 to me-2 */}
+                  <span className="event-badge-show bg-active me-2">
                     Active
                   </span>
                   <span className="event-badge-show bg-ah-fill">
                     Open For Staff Only
                   </span>
                 </div>
-                <h6 className="font-weight-bold mb-3 pb-2 border-bottom">
+                <h6 className="fw-bold mb-3 pb-2 border-bottom">
                   Coach Meeting
                 </h6>
                 <div className="d-flex align-items-center">
-                  <div className="mr-3 text-center">
-                    <h3 className="font-weight-bold mb-0 text-dark">01</h3>
-                    <h6 className="font-weight-bold">Dec</h6>
+                  <div className="me-3 text-center">
+                    <h3 className="fw-bold mb-0 text-dark">01</h3>
+                    <h6 className="fw-bold">Dec</h6>
                   </div>
                   <div className="small-font">
                     <div className="pb-1">
-                      <i className="bi bi-geo-alt mr-1"></i> Head Coach Cabin
+                      <i className="bi bi-geo-alt me-1"></i> Head Coach Cabin
                     </div>
                     <div className="pb-1">
-                      <i className="bi bi-clock mr-1"></i> 9:30 am - 1:30 pm
+                      <i className="bi bi-clock me-1"></i> 9:30 am - 1:30 pm
                     </div>
                   </div>
                 </div>
@@ -559,65 +581,26 @@ const Dashboard = () => {
               </div>
               <div className="p-3">
                 <div className="mb-3 d-flex">
-                  <span className="event-badge-show bg-cancelled mr-2">
-                    Cancelled
-                  </span>
+                  {/* Changed mr-2 to me-2 */}
+                  <span className="event-badge-show bg-draft me-2">Draft</span>
                   <span className="event-badge-show bg-ah-fill">
                     Open For Staff Only
                   </span>
                 </div>
-                <h6 className="font-weight-bold mb-3 pb-2 border-bottom">
+                <h6 className="fw-bold mb-3 pb-2 border-bottom">
                   Coach Meeting
                 </h6>
                 <div className="d-flex align-items-center">
-                  <div className="mr-3 text-center">
-                    <h3 className="font-weight-bold mb-0 text-dark">01</h3>
-                    <h6 className="font-weight-bold">Dec</h6>
+                  <div className="me-3 text-center">
+                    <h3 className="fw-bold mb-0 text-dark">01</h3>
+                    <h6 className="fw-bold">Dec</h6>
                   </div>
                   <div className="small-font">
                     <div className="pb-1">
-                      <i className="bi bi-geo-alt mr-1"></i> Head Coach Cabin
+                      <i className="bi bi-geo-alt me-1"></i> Head Coach Cabin
                     </div>
                     <div className="pb-1">
-                      <i className="bi bi-clock mr-1"></i> 9:30 am - 1:30 pm
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card : Coach Meeting */}
-          <div className="col-xl-3 col-md-6 col-12 mb-1">
-            <div className="content-card p-0 overflow-hidden h-100 shadow-20-light">
-              <div className="event-card-image-div">
-                <img
-                  src="https://images.unsplash.com/photo-1560439514-4e9645039924?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="card-image"
-                  className="card-image"
-                />
-              </div>
-              <div className="p-3">
-                <div className="mb-3 d-flex">
-                  <span className="event-badge-show bg-draft mr-2">Draft</span>
-                  <span className="event-badge-show bg-ah-fill">
-                    Open For Staff Only
-                  </span>
-                </div>
-                <h6 className="font-weight-bold mb-3 pb-2 border-bottom">
-                  Coach Meeting
-                </h6>
-                <div className="d-flex align-items-center">
-                  <div className="mr-3 text-center">
-                    <h3 className="font-weight-bold mb-0 text-dark">01</h3>
-                    <h6 className="font-weight-bold">Dec</h6>
-                  </div>
-                  <div className="small-font">
-                    <div className="pb-1">
-                      <i className="bi bi-geo-alt mr-1"></i> Head Coach Cabin
-                    </div>
-                    <div className="pb-1">
-                      <i className="bi bi-clock mr-1"></i> 9:30 am - 1:30 pm
+                      <i className="bi bi-clock me-1"></i> 9:30 am - 1:30 pm
                     </div>
                   </div>
                 </div>

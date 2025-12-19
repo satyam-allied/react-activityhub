@@ -54,7 +54,8 @@ const Users = () => {
           </div>
           <div className="breadcrumb-custom">
             breadcrumbs \ breadcrumbs \ breadcrumbs \{" "}
-            <span className="font-weight-bold">Users</span>
+            {/* Changed font-weight-bold to fw-bold */}
+            <span className="fw-bold">Users</span>
           </div>
         </div>
       </div>
@@ -64,11 +65,10 @@ const Users = () => {
         <div className="row mb-4 align-items-center">
           <div className="col-md-10 mb-3 mb-md-0">
             <div className="input-group search-input-group-table w-100">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <i className="bi bi-search"></i>
-                </span>
-              </div>
+              {/* Removed input-group-prepend wrapper */}
+              <span className="input-group-text">
+                <i className="bi bi-search"></i>
+              </span>
               <input
                 type="text"
                 className="form-control"
@@ -76,9 +76,11 @@ const Users = () => {
               />
             </div>
           </div>
-          <div className="col-md-2 text-right">
+          {/* Changed text-right to text-end */}
+          <div className="col-md-2 text-end">
             <button className="btn-create">
-              <i className="bi bi-person-plus-fill mr-2"></i> Add User
+              {/* Changed mr-2 to me-2 */}
+              <i className="bi bi-person-plus-fill me-2"></i> Add User
             </button>
           </div>
         </div>
@@ -104,10 +106,11 @@ const Users = () => {
                       <img
                         src={user.avatar}
                         alt={user.name}
-                        className="rounded-circle mr-3"
+                        // Changed mr-3 to me-3
+                        className="rounded-circle me-3"
                         style={{ width: "36px", height: "36px" }}
                       />
-                      <span className="font-weight-500 text-dark">
+                      <span className="font-weight-500">
                         {user.name}
                       </span>
                     </div>

@@ -1,7 +1,7 @@
 /* ==================== DARK MODE CONFIGURATION ==================== */
 /* Import this file in your App.js AFTER App.css */
 
-/*  Global Variable Overrides */
+/* Global Variable Overrides */
 body.dark-mode {
   /* --- Text Colors --- */
   /* Main Headings -> White */
@@ -20,7 +20,7 @@ body.dark-mode {
   color: var(--ah-black-10);
 }
 
-/*  Layout & Containers */
+/* Layout & Containers */
 /* Sidebar and Navbar get the Deepest Navy */
 body.dark-mode .navbar-custom,
 body.dark-mode .sidebar {
@@ -115,7 +115,7 @@ body.dark-mode .search-input-group-table input::placeholder {
   color: var(--ah-black-30);
 }
 
-/*  Action Buttons */
+/* Action Buttons */
 body.dark-mode .btn-icon {
   color: var(--ah-white-30);
 }
@@ -169,7 +169,7 @@ body.dark-mode .popover-link:hover {
   color: var(--ah-white-00);
 }
 
-/*  Dashboard Specifics */
+/* Dashboard Specifics */
 
 /* Activity List Items */
 body.dark-mode .activity-item {
@@ -209,6 +209,7 @@ body.dark-mode .schedule-time,
 body.dark-mode .schedule-sub {
   color: var(--ah-white-30);
 }
+/* Updated border-right selector logic if needed */
 body.dark-mode .schedule-time {
   border-right: 1px solid var(--ah-dark-stroke) !important;
 }
@@ -265,9 +266,93 @@ body.dark-mode .badge-approve {
   color: var(--ah-green-action-10);
 }
 
-/* Left Border Logic */
+/* Left Border Logic - Renamed to border-end for BS5 */
 @media (min-width: 992px) {
-  body.dark-mode .border-right-lg {
+  body.dark-mode .border-end-lg {
     border-right: 1px solid var(--ah-dark-stroke) !important;
   }
+}
+
+/* ==========================================================================
+   FIXES START HERE
+   ========================================================================== */
+
+/* 1. Fix Sidebar Child Links */
+/* Makes sub-menu items visible (Light Grey) instead of dark on dark */
+body.dark-mode .child-link {
+  color: var(--ah-white-30) !important;
+}
+
+body.dark-mode .child-link:hover,
+body.dark-mode .child-link.active {
+  color: var(--ah-white-00) !important;
+  background-color: var(--ah-bg-dark-30);
+}
+
+/* 2. Fix Standard HTML Tables (Site, Activities, etc.) */
+/* Forces transparent background so the Content Card dark bg shows through */
+body.dark-mode .table-custom {
+  background-color: transparent !important;
+}
+
+body.dark-mode .table-custom tbody tr {
+  background-color: transparent !important;
+  color: var(--ah-white-20);
+}
+
+/* Row Hover Effect */
+body.dark-mode .table-custom tbody tr:hover {
+  background-color: var(--ah-bg-dark-30) !important;
+  color: var(--ah-white-00);
+}
+
+/* Table Cells Border & Color */
+body.dark-mode .table-custom td,
+body.dark-mode .table-custom th {
+  background-color: transparent;
+  border-color: var(--ah-dark-stroke);
+}
+
+/* 3. Fix Tag Page (React Data Table Component) */
+/* These classes are injected by the library and need explicit overrides */
+
+/* Header Row */
+body.dark-mode .rdt_TableHeadRow {
+  background-color: var(--ah-bg-dark-30) !important;
+  color: var(--ah-white-30) !important;
+  border-bottom: 1px solid var(--ah-dark-stroke) !important;
+}
+
+/* Data Rows */
+body.dark-mode .rdt_TableRow {
+  background-color: transparent !important; /* Let card bg show */
+  color: var(--ah-white-20) !important;
+  border-bottom: 1px solid var(--ah-dark-stroke) !important;
+}
+
+/* Data Row Hover */
+body.dark-mode .rdt_TableRow:hover {
+  background-color: var(--ah-bg-dark-30) !important;
+  outline: none !important;
+  color: var(--ah-white-00) !important;
+}
+
+/* Pagination Text */
+body.dark-mode .table-footer {
+  color: var(--ah-white-30);
+  border-top-color: var(--ah-dark-stroke);
+}
+
+body.dark-mode .page-input {
+  background-color: var(--ah-bg-dark-30);
+  color: var(--ah-white-00);
+  border-color: var(--ah-dark-stroke);
+}
+
+body.dark-mode .pagination-btn {
+  color: var(--ah-white-30);
+}
+
+body.dark-mode .pagination-btn:hover {
+  color: var(--ah-brand-default);
 }

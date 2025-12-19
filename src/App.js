@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+// --- ADDED: Bootstrap 5 JS Bundle (Required for Dropdowns/Modals/Toggles) ---
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import "./App.css";
 import "./DarkMode.css";
 import "./variables.css";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import AppRoutes from "./AppRoutes"; // Import the new routes file
+import AppRoutes from "./AppRoutes";
 
 function App() {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);

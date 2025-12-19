@@ -26,7 +26,6 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
   const isActive = (path) => (location.pathname === path ? "active" : "");
 
   // 2. Check if a PARENT should be blue (Active)
-  // Accepts an ARRAY of paths. If current URL starts with any of them, return active.
   const isParentActive = (paths) => {
     return paths.some((path) => location.pathname.startsWith(path))
       ? "active-parent"
@@ -34,7 +33,6 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
   };
 
   // 3. Check if a PARENT should be open (Bootstrap 'show')
-  // Accepts an ARRAY of paths.
   const isShow = (paths) => {
     return paths.some((path) => location.pathname.startsWith(path))
       ? "show"
@@ -47,12 +45,12 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
       id="sidebar"
       ref={sidebarRef}
     >
-      {/* Select Organisation (Kept from your original code) */}
+      {/* Select Organisation */}
       <div className="dropdown mb-3">
         <button
           className="btn org-dropdown-btn"
           type="button"
-          data-toggle="dropdown"
+          data-bs-toggle="dropdown"
         >
           <span>
             <i className="bi bi-cursor-fill sidebar-icon"></i> Select Org
@@ -74,15 +72,14 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
       {/* Accordion Wrapper */}
       <div id="sidebarAccordion">
         {/* 1. ORGANIZATION Section */}
-        {/* Child: Organization (/organizations) */}
         <div className="card bg-transparent border-0">
           <button
             className={`btn sidebar-accordion-btn ${isParentActive([
               "/organizations",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapseOrg"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOrg"
             aria-expanded={isShow(["/organizations"]) === "show"}
           >
             <span>
@@ -93,7 +90,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
           <div
             id="collapseOrg"
             className={`collapse ${isShow(["/organizations"])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link
               to="/organizations"
@@ -113,12 +110,12 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               "/profile",
               "/time-tracking",
               "/events",
-              "/events/create", // 1. Add this so the parent stays blue/active
+              "/events/create",
               "/event-type",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapseManage"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseManage"
             aria-expanded={
               isShow([
                 "/manage-roles",
@@ -126,7 +123,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
                 "/profile",
                 "/time-tracking",
                 "/events",
-                "/events/create", // 2. Add this so the menu stays open
+                "/events/create",
                 "/event-type",
               ]) === "show"
             }
@@ -145,10 +142,10 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               "/profile",
               "/time-tracking",
               "/events",
-              "/events/create", // 3. Add this here as well
+              "/events/create",
               "/event-type",
             ])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link
               to="/manage-roles"
@@ -175,11 +172,9 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               Time Tracking
             </Link>
 
-            {/* 4. Update this specific Link logic */}
             <Link
               to="/events"
               className={`child-link ${
-                /* Checks if path is exactly /events OR starts with /events/ (like /events/create) */
                 location.pathname === "/events" ||
                 location.pathname.startsWith("/events/")
                   ? "active"
@@ -199,15 +194,14 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
         </div>
 
         {/* 3. INVITATIONS Section */}
-        {/* Child: Invite Users (/invitations) */}
         <div className="card bg-transparent border-0">
           <button
             className={`btn sidebar-accordion-btn ${isParentActive([
               "/invitations",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapseInvites"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseInvites"
             aria-expanded={isShow(["/invitations"]) === "show"}
           >
             <span>
@@ -218,7 +212,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
           <div
             id="collapseInvites"
             className={`collapse ${isShow(["/invitations"])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link
               to="/invitations"
@@ -230,15 +224,14 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
         </div>
 
         {/* 4. PENDING ENROLLMENT Section */}
-        {/* Child: Pending Enrollment (/pending-enrollment) */}
         <div className="card bg-transparent border-0">
           <button
             className={`btn sidebar-accordion-btn ${isParentActive([
               "/pending-enrollment",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapsePending"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsePending"
             aria-expanded={isShow(["/pending-enrollment"]) === "show"}
           >
             <span>
@@ -250,7 +243,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
           <div
             id="collapsePending"
             className={`collapse ${isShow(["/pending-enrollment"])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link
               to="/pending-enrollment"
@@ -262,7 +255,6 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
         </div>
 
         {/* 5. GROUPS Section */}
-        {/* Children: Groups, Group Type */}
         <div className="card bg-transparent border-0">
           <button
             className={`btn sidebar-accordion-btn ${isParentActive([
@@ -270,8 +262,8 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               "/group-type",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapseGroups"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseGroups"
             aria-expanded={isShow(["/groups", "/group-type"]) === "show"}
           >
             <span>
@@ -282,7 +274,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
           <div
             id="collapseGroups"
             className={`collapse ${isShow(["/groups", "/group-type"])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link to="/groups" className={`child-link ${isActive("/groups")}`}>
               Groups
@@ -297,7 +289,6 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
         </div>
 
         {/* 6. SYSTEM Section */}
-        {/* Children: Tag, Site, Activities, Role Types, Logs */}
         <div className="card bg-transparent border-0">
           <button
             className={`btn sidebar-accordion-btn ${isParentActive([
@@ -308,8 +299,8 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               "/logs",
             ])}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#collapseSystem"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSystem"
             aria-expanded={
               isShow([
                 "/tag",
@@ -334,7 +325,7 @@ const Sidebar = ({ isMobileOpen, closeMobileSidebar }) => {
               "/manage-role-types",
               "/logs",
             ])}`}
-            data-parent="#sidebarAccordion"
+            data-bs-parent="#sidebarAccordion"
           >
             <Link to="/tag" className={`child-link ${isActive("/tag")}`}>
               Tag

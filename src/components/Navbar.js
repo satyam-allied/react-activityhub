@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Navbar = ({ toggleMobileSidebar }) => {
   const [profileOpen, setProfileOpen] = useState(false);
-  
+
   // --- 1. ADDED: State for Dark Mode ---
-  // We check localStorage first to persist the selection on refresh
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
@@ -42,7 +41,8 @@ const Navbar = ({ toggleMobileSidebar }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light navbar-custom fixed-top shadow-sm">
       <button
-        className="btn btn-link d-lg-none mr-2 p-0"
+        // Changed mr-2 to me-2
+        className="btn btn-link d-lg-none me-2 p-0"
         id="sidebarToggle"
         onClick={toggleMobileSidebar}
       >
@@ -59,8 +59,9 @@ const Navbar = ({ toggleMobileSidebar }) => {
       <button
         className="navbar-toggler border-0 p-0"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarContent"
+        // Updated data attributes for Bootstrap 5
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -68,31 +69,34 @@ const Navbar = ({ toggleMobileSidebar }) => {
       <div className="collapse navbar-collapse" id="navbarContent">
         <div className="mx-auto search-container d-none d-lg-block">
           <div className="input-group search-input-group">
-            <div className="input-group-prepend">
-              <span className="input-group-text">
-                <i className="bi bi-search"></i>
-              </span>
-            </div>
+            {/* Removed input-group-prepend wrapper (Deprecated in v5) */}
+            <span className="input-group-text">
+              <i className="bi bi-search"></i>
+            </span>
             <input type="text" className="form-control" placeholder="Search" />
           </div>
         </div>
 
-        <ul className="navbar-nav ml-auto align-items-lg-center mobile-nav-items">
+        {/* Changed ml-auto to ms-auto */}
+        <ul className="navbar-nav ms-auto align-items-lg-center mobile-nav-items">
           <li className="nav-item">
             <a className="nav-link" href="#chat">
               <i className="bi bi-chat-square nav-icon"></i>
-              <span className="d-lg-none ml-2">Chat</span>
+              {/* Changed ml-2 to ms-2 */}
+              <span className="d-lg-none ms-2">Chat</span>
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#bell">
               <i className="bi bi-bell nav-icon"></i>
-              <span className="d-lg-none ml-2">Notifications</span>
+              {/* Changed ml-2 to ms-2 */}
+              <span className="d-lg-none ms-2">Notifications</span>
             </a>
           </li>
 
-          <li 
-            className="nav-item dropdown ml-lg-2 position-relative" 
+          <li
+            // Changed ml-lg-2 to ms-lg-2
+            className="nav-item dropdown ms-lg-2 position-relative"
             ref={profileDropdownRef}
           >
             <div
@@ -102,10 +106,12 @@ const Navbar = ({ toggleMobileSidebar }) => {
             >
               <img
                 src="https://ui-avatars.com/api/?name=Albus+Dumbledore&background=random"
-                className="user-avatar mr-2"
+                // Changed mr-2 to me-2
+                className="user-avatar me-2"
                 alt="user"
               />
-              <div className="user-info mr-2 d-none d-lg-block">
+              {/* Changed mr-2 to me-2 */}
+              <div className="user-info me-2 d-none d-lg-block">
                 <div className="user-name">Albus Dumbldore</div>
                 <div className="user-role">Super Admin</div>
               </div>
@@ -115,7 +121,8 @@ const Navbar = ({ toggleMobileSidebar }) => {
                 </span>
               </div>
               <i
-                className={`bi bi-chevron-down transition-icon ml-auto ml-lg-0 ${
+                // Changed ml-auto ml-lg-0 to ms-auto ms-lg-0
+                className={`bi bi-chevron-down transition-icon ms-auto ms-lg-0 ${
                   profileOpen ? "rotate-180" : ""
                 }`}
                 style={{ color: "#5b55e6", fontSize: "0.8rem" }}
@@ -165,21 +172,25 @@ const Navbar = ({ toggleMobileSidebar }) => {
                     Profile Theme
                   </label>
                   <div className="theme-switch-wrapper">
-                    {/* --- 3. UPDATED: Logic to highlight active label --- */}
-                    <span className={`theme-label ${!darkMode ? 'active' : ''}`}>Light</span>
-                    
+                    <span
+                      className={`theme-label ${!darkMode ? "active" : ""}`}
+                    >
+                      Light
+                    </span>
+
                     <label className="theme-switch">
-                      {/* --- 4. UPDATED: Connect Input to State --- */}
-                      <input 
-                        type="checkbox" 
+                      <input
+                        type="checkbox"
                         checked={darkMode}
-                        onChange={() => setProfileOpen(true)} // Keep open when clicking
-                        onClick={() => setDarkMode(!darkMode)} // Toggle state
+                        onChange={() => setProfileOpen(true)}
+                        onClick={() => setDarkMode(!darkMode)}
                       />
                       <span className="slider round"></span>
                     </label>
-                    
-                    <span className={`theme-label ${darkMode ? 'active' : ''}`}>Dark</span>
+
+                    <span className={`theme-label ${darkMode ? "active" : ""}`}>
+                      Dark
+                    </span>
                   </div>
                 </div>
 

@@ -46,13 +46,12 @@ const Activities = () => {
       <div className="row mb-4">
         <div className="col-12">
           <div className="page-header">
-            <div className="page-title">
-              Activities
-            </div>
+            <div className="page-title">Activities</div>
           </div>
           <div className="breadcrumb-custom">
             breadcrumbs \ breadcrumbs \ breadcrumbs \{" "}
-            <span className="font-weight-bold">Activities</span>
+            {/* Changed font-weight-bold to fw-bold */}
+            <span className="fw-bold">Activities</span>
           </div>
         </div>
       </div>
@@ -62,11 +61,10 @@ const Activities = () => {
         <div className="row mb-4 align-items-center">
           <div className="col-md-10 mb-3 mb-md-0">
             <div className="input-group search-input-group-table w-100">
-              <div className="input-group-prepend">
-                <span className="input-group-text">
-                  <i className="bi bi-search"></i>
-                </span>
-              </div>
+              {/* Removed input-group-prepend wrapper */}
+              <span className="input-group-text">
+                <i className="bi bi-search"></i>
+              </span>
               <input
                 type="text"
                 className="form-control border-0 bg-transparent"
@@ -74,9 +72,11 @@ const Activities = () => {
               />
             </div>
           </div>
-          <div className="col-md-2 text-right">
+          {/* Changed text-right to text-end */}
+          <div className="col-md-2 text-end">
             <button className="btn-create">
-              <i className="bi bi-plus-lg mr-2"></i> Create Activities
+              {/* Changed mr-2 to me-2 */}
+              <i className="bi bi-plus-lg me-2"></i> Create Activities
             </button>
           </div>
         </div>
