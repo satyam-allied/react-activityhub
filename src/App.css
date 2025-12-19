@@ -1157,6 +1157,132 @@ input:checked + .slider:before {
   color: var(--ah-brand-default); /* Using existing brand-default variable */
 }
 
+/* ==================== TABLE STYLES ==================== */
+
+/* --- Toolbar (Top Icons) --- */
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Tight spacing between icons */
+}
+
+.toolbar-btn {
+  border: none;
+  background: transparent;
+  color: var(--ah-black-20, #6c757d); /* Fallback color included */
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+  font-size: 1.1rem;
+}
+
+.toolbar-btn:hover {
+  background-color: var(--ah-bg-light, #f8f9fa);
+  color: var(--ah-brand-default, #5856d6);
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--ah-stroke, #dee2e6);
+  margin: 0 8px;
+}
+
+/* --- Search Box Customization --- */
+.search-input-group-table {
+  background-color: var(--ah-white-00, #fff);
+  border-radius: 8px;
+  padding: 4px 10px;
+  border: 1px solid var(--ah-stroke, #dee2e6);
+  display: flex;
+  align-items: center;
+}
+.search-input-group-table input:focus {
+  box-shadow: none;
+}
+
+/* --- Action Buttons (Edit/View/Delete) --- */
+.action-btn-group {
+  display: flex;
+  align-items: center;
+}
+.btn-icon {
+  border: none;
+  background: transparent;
+  padding: 4px 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  color: #6c757d;
+}
+.btn-icon:hover {
+  color: #5856d6;
+  transform: scale(1.1);
+}
+.btn-icon.delete {
+  color: #ffb3b3;
+}
+.btn-icon.delete:hover {
+  color: #dc3545;
+}
+
+/* --- Create Button --- */
+.btn-create {
+  background-color: #5856d6;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.btn-create:hover {
+  background-color: #4b49b6;
+}
+
+/* --- Pagination Footer --- */
+.table-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+.footer-group {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.page-input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  margin-left: 8px;
+}
+.pagination-btn {
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination-btn:not(:disabled):hover {
+  color: #5856d6;
+}
+
 
 /* ==================== Account PAGE STYLES ==================== */
 
