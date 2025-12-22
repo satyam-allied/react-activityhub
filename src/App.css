@@ -7,6 +7,7 @@
   --sidebar-width: 260px;
   /* Using your brand variable for primary color consistency */
   --primary-color: var(--ah-brand-default);
+  --ah-fill: #f2f2f2;
 }
 
 body {
@@ -481,7 +482,7 @@ input:checked + .slider:before {
 .page-header .page-title {
   font-weight: 500;
   color: var(--ah-black-10);
-  font-size: calc(24 / 16 * 1rem);
+  font-size: calc(16 / 16 * 1rem);
 }
 
 .page-header p {
@@ -878,7 +879,7 @@ input:checked + .slider:before {
 }
 
 .table-custom thead {
-  background-color: var(--ah-fill);
+  background-color: transparent !important;
 }
 
 .table-custom th {
@@ -889,6 +890,8 @@ input:checked + .slider:before {
   font-size: 0.9rem;
   vertical-align: middle;
   text-transform: uppercase;
+
+  background-color: var(--ah-fill, #f2f2f2) !important;
 }
 
 .table-custom th:first-child {
@@ -983,7 +986,7 @@ input:checked + .slider:before {
   color: var(--ah-white-00) !important;
   border: none;
   border-radius: 10px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -999,12 +1002,33 @@ input:checked + .slider:before {
   border: 1px solid var(--ah-brand-default);
 }
 
+.btn-back {
+  background-color: var(--ah-bg-light);
+  color: var(--ah-black-30) !important;
+  border: 1px solid var(--ah-stroke);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-back:hover {
+  background-color: var(--ah-brand-default);
+  color: var(--ah-white-00) !important;
+  box-shadow: 0 4px 12px rgba(88, 86, 214, 0.2);
+  border: 1px solid var(--ah-brand-default);
+}
+
 .btn-cancel {
   background-color: var(--ah-fill);
   color: var(--ah-white-00);
   border: none;
   border-radius: 10px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;

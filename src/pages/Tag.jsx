@@ -15,9 +15,6 @@ const Tag = () => {
       {/* Header */}
       <div className="row mb-4">
         <div className="col-12">
-          <div className="page-header">
-            <div className="page-title">Tag</div>
-          </div>
           <div className="breadcrumb-custom">
             breadcrumbs \ breadcrumbs \ breadcrumbs \{" "}
             {/* Changed font-weight-bold to fw-bold */}
@@ -27,6 +24,23 @@ const Tag = () => {
       </div>
 
       <div className="content-card shadow-20-light">
+        <div className="row mb-4">
+          <div className="col-md-6">
+            <div className="page-header">
+              <div className="page-title">Tag</div>
+            </div>
+          </div>
+
+          <div className="col-md-6 d-flex justify-content-end">
+            <button className="btn-back mx-4">
+              <i className="bi bi-arrow-left me-2"></i> Back
+            </button>
+            <button className="btn-create ms-4">
+              <i className="bi bi-plus-lg me-2"></i> Create Tag
+            </button>
+          </div>
+        </div>
+
         {/* Top Controls */}
         <div className="row mb-4 align-items-center">
           <div className="col-md-10 mb-3 mb-md-0">
@@ -41,14 +55,6 @@ const Tag = () => {
                 placeholder="Search"
               />
             </div>
-          </div>
-          {/* text-end is correct for BS5 (replaces text-right) */}
-          <div className="col-md-2 text-end">
-            {/* Using Common .btn-create class */}
-            <button className="btn-create">
-              {/* Changed mr-2 to me-2 */}
-              <i className="bi bi-plus-lg me-2"></i> Create Tag
-            </button>
           </div>
         </div>
 
