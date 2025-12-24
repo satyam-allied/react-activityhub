@@ -124,19 +124,32 @@ body.dark-mode .btn-icon:hover {
 }
 
 body.dark-mode .btn-back {
-  background-color: var(--ah-bg-dark-20); 
-  color: var(--ah-white-30) !important;   
-  border-color: var(--ah-dark-stroke);    
+  background-color: var(--ah-bg-dark-20);
+  color: var(--ah-white-30) !important;
+  border-color: var(--ah-dark-stroke);
 }
 
 body.dark-mode .btn-back:hover {
-  background-color: var(--ah-brand-default); 
-  color: var(--ah-white-00) !important;      
+  background-color: var(--ah-brand-default);
+  color: var(--ah-white-00) !important;
   border-color: var(--ah-brand-default);
 }
 
 body.dark-mode .btn-icon.delete {
   color: var(--ah-red-action-dark-10); /* Using dark mode red var */
+}
+
+body.dark-mode .navbar-collapse {
+  background-color: var(--ah-bg-dark-10);
+}
+
+body.dark-mode .toggle-icon {
+  color: var(--ah-white-30);
+  font-size: 0.8rem;
+}
+
+body.dark-mode .toggle-icon:hover {
+  color: var(--ah-white-00);
 }
 
 /* Profile Popover */

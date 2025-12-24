@@ -124,6 +124,11 @@ a {
   outline: none;
 }
 
+.toggle-icon {
+  color: var(--ah-brand-default);
+  font-size: 0.8rem;
+}
+
 /* --- POPOVER SPECIFIC STYLES --- */
 .profile-popover-container {
   position: absolute;

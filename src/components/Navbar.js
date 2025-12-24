@@ -122,10 +122,9 @@ const Navbar = ({ toggleMobileSidebar }) => {
               </div>
               <i
                 // Changed ml-auto ml-lg-0 to ms-auto ms-lg-0
-                className={`bi bi-chevron-down transition-icon ms-auto ms-lg-0 ${
+                className={`bi bi-chevron-down transition-icon ms-auto ms-lg-0 toggle-icon ${
                   profileOpen ? "rotate-180" : ""
                 }`}
-                style={{ color: "#5b55e6", fontSize: "0.8rem" }}
               ></i>
             </div>
 
