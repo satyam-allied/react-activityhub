@@ -1024,9 +1024,9 @@ input:checked + .slider:before {
 }
 
 .btn-cancel {
-  background-color: var(--ah-fill);
-  color: var(--ah-white-00);
-  border: none;
+  background-color: var(--ah-red-action-20);
+  color: var(--ah-red-action-10);
+  border: 1px solid var(--ah-stroke);
   border-radius: 10px;
   padding: 10px 20px;
   font-weight: 500;
@@ -1038,12 +1038,11 @@ input:checked + .slider:before {
 }
 
 .btn-cancel:hover {
-  background-color: var(--ah-white-00);
-  color: var(--ah-fill);
+  background-color: var(--ah-red-action-10);
+  color: var(--ah-white-00);
   box-shadow: 0 4px 12px rgba(88, 86, 214, 0.2);
-  border: 1px solid var(--ah-fill);
+  border: 1px solid var(--ah-red-action-10);
 }
-
 /* --- Common Status Badges --- */
 .status-badge {
   padding: 6px 12px;
