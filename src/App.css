@@ -984,7 +984,7 @@ input:checked + .slider:before {
 .btn-create {
   background-color: var(--ah-brand-default);
   color: var(--ah-white-00) !important;
-  border: none;
+  border: 1px solid var(--ah-stroke);
   border-radius: 10px;
   padding: 10px 20px;
   font-weight: 500;
